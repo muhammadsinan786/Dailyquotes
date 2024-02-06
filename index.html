@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DAILY QUOTES </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .toggle-mode {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        
+        .toggle-mode img {
+            cursor: pointer;
+            max-width: 30px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-mode img:hover {
+            transform: scale(1.1);
+        }
+        
+        .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-post h2 {
+            color: #333;
+        }
+        
+        .blog-post p {
+            color: #666;
+        }
+        
+        .blog-post img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .dark-mode {
+            background-color: #333;
+            color: #f2f2f2;
+        }
+        
+        .dark-mode .blog-post {
+            background-color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dark-mode .blog-post h2 {
+            color: #f2f2f2;
+        }
+        
+        .dark-mode .blog-post p {
+            color: #ccc;
+        }
+        
+        .dark-mode .toggle-mode img {
+            content: url('dark-mode-icon.png');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="placeholder.png" alt="Blog Heading" width="200">
+    </header>
+    <div class="container">
+        <div class="toggle-mode">
+            <img onclick="toggleMode()" src="light-mode-icon.png" alt="Toggle Mode">
+        </div>
+
+        <div class="blog-post">
+            <img src="blog-post-image.jpg" alt="Post Image">
+            <p><i>“ Everything awaits its time, no rose blooms before its time, no sun rises before its time, wait for what is yours…
+And it will come to you ”</i></p>
+            <h5 onclick="window.location.href='https://g.co/kgs/G8Z4iFS';" style="cursor: pointer;" ><i>-RUMI</i></h5>
+        </div>
+
+        <!-- More blog posts go here -->
+    </div>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
